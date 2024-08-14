@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$d6/d07/classISubject.html" title="Interface for the subject in the observer pattern." alt="" coords="5,5,75,31"/>
+<area shape="rect" id="Node000001" href="$d4/dd2/classISource.html" title="Interface for a data source in a data processing pipeline." alt="" coords="123,5,189,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="91,16,122,16,122,21,91,21"/>
+</map>

@@ -1,0 +1,68 @@
+\doxysection{IObserver Class Reference}
+\hypertarget{classIObserver}{}\label{classIObserver}\index{IObserver@{IObserver}}
+
+
+Interface for observer in the observer pattern.  
+
+
+
+
+{\ttfamily \#include $<$IObserver.\+h$>$}
+
+
+
+Inheritance diagram for IObserver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{de/dc0/classIObserver__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIObserver_a1306da2dbaf55620130af5586e3a0373}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classIObserver}{IObserver}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIObserver_a90490f729c3546ecce5108fbf3833621}{Update}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to be overridden by concrete observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for observer in the observer pattern. 
+
+The \doxylink{classIObserver}{IObserver} class defines a standard interface for all observer objects, which need to be notified of changes in the subject they are observing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classIObserver_a1306da2dbaf55620130af5586e3a0373}\label{classIObserver_a1306da2dbaf55620130af5586e3a0373} 
+\index{IObserver@{IObserver}!````~IObserver@{\texorpdfstring{$\sim$}{\string~}IObserver}}
+\index{````~IObserver@{\texorpdfstring{$\sim$}{\string~}IObserver}!IObserver@{IObserver}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IObserver()}{\string~IObserver()}}
+{\footnotesize\ttfamily virtual IObserver\+::\texorpdfstring{$\sim$}{\string~}\+IObserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{classIObserver}{IObserver}. 
+
+Ensures that derived class destructors are called properly. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classIObserver_a90490f729c3546ecce5108fbf3833621}\label{classIObserver_a90490f729c3546ecce5108fbf3833621} 
+\index{IObserver@{IObserver}!Update@{Update}}
+\index{Update@{Update}!IObserver@{IObserver}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void IObserver\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to be overridden by concrete observers. 
+
+This method is called to notify the observer of a change in the subject\textquotesingle{}s state. 
+
+Implemented in \mbox{\hyperlink{classByteProcessor_a5aad03dc374590f89893087613fb073d}{Byte\+Processor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+IObserver.\+h\end{DoxyCompactItemize}

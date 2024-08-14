@@ -1,0 +1,5 @@
+<map id="ByteProcessor" name="ByteProcessor">
+<area shape="rect" id="Node000001" title="Class responsible for processing bytes from a source and writing results to a sink." alt="" coords="5,79,113,105"/>
+<area shape="rect" id="Node000002" href="$dd/d8c/classIObserver.html" title="Interface for observer in the observer pattern." alt="" coords="20,5,98,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,46,62,79,56,79,56,46"/>
+</map>

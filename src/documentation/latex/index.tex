@@ -1,0 +1,80 @@
+\chapter{Byte\+Processor Program Documentation}
+\hypertarget{index}{}\label{index}\index{ByteProcessor Program Documentation@{ByteProcessor Program Documentation}}
+\label{index_md_documentation_2main__page}%
+\Hypertarget{index_md_documentation_2main__page}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md1}
+This C++ program, known as "{}\+Byte\+Processor,"{} is designed to read bytes from a source, convert them into string characters, and send the converted results to a sink. It strictly adheres to the C++17 standard and follows the Google C++ Style Guide. The source code is structured in the {\ttfamily src} folder and includes a CMake configuration file for building and testing.\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Program Features}{Program Features}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Read bytes from a source in a separate thread.
+\item Convert bytes into string characters based on specified formats.
+\item Send the converted string characters to a sink.
+\item Start and stop the processing thread via class API.
+\item Unit testing with gtest and gmock.
+\item Documentation for all classes and functions.
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Byte Processing Logic}{Byte Processing Logic}}\label{index_autotoc_md3}
+The program reads bytes consisting of bits that encode the type and data\+:
+
+
+\begin{DoxyItemize}
+\item Bits 6-\/7\+: {\ttfamily type} -\/ Encodes the data type.
+\begin{DoxyItemize}
+\item {\ttfamily 0b00}\+: Unsigned integer.
+\item {\ttfamily 0b01}\+: Signed integer.
+\item {\ttfamily 0b10}\+: Latin alphabet letter (\textquotesingle{}a\textquotesingle{} = {\ttfamily 0b000000}, \textquotesingle{}b\textquotesingle{} = {\ttfamily 0b000001}, etc.).
+\end{DoxyItemize}
+\item Bits 0-\/5\+: {\ttfamily data} -\/ Stores the actual data.
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Program Structure}{Program Structure}}\label{index_autotoc_md4}
+The program follows object-\/oriented principles and might implement the Model-\/\+View-\/\+Controller (MVC) pattern\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Model}}\+: \doxylink{classByteProcessor}{Byte\+Processor} class handles the core processing logic.
+\item {\bfseries{View}}\+: Not applicable in this context.
+\item {\bfseries{Controller}}\+: Not applicable in this context.
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Design Patterns}{Design Patterns}}\label{index_autotoc_md5}
+The program incorporates the following design patterns\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Observer Pattern}}\+: {\ttfamily \doxylink{classISource}{ISource}} notifies {\ttfamily \doxylink{classByteProcessor}{Byte\+Processor}} when new data is available.
+\item {\bfseries{Singleton Pattern}}\+: Ensures a single instance of the {\ttfamily \doxylink{classByteProcessor}{Byte\+Processor}} main processing class.
+\item {\bfseries{Command Pattern}}\+: Encapsulates actions for reading, processing, and writing data.
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Class Overview}{Class Overview}}\label{index_autotoc_md6}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Byte\+Processor Class}{ByteProcessor Class}}\label{index_autotoc_md7}
+The {\ttfamily \doxylink{classByteProcessor}{Byte\+Processor}} class is responsible for reading bytes from a source, converting them into string characters, and writing the results to a sink in a separate thread.\hypertarget{index_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Public Methods}{Public Methods}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{classByteProcessor}{Byte\+Processor}(\doxylink{classISource}{ISource}\& source, \doxylink{classISink}{ISink}\& sink)}\+: Constructor.
+\item {\ttfamily \texorpdfstring{$\sim$}{\string~}\+Byte\+Processor()}\+: Destructor.
+\item {\ttfamily void start()}\+: Starts the processing thread.
+\item {\ttfamily void stop()}\+: Stops the processing thread.
+\item {\ttfamily void Update()}\+: Updates the observer state and notifies the processing thread.
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{IObserver Interface}{IObserver Interface}}\label{index_autotoc_md9}
+Defines the observer interface in the observer pattern.\hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Public Methods}{Public Methods}}\label{index_autotoc_md10}
+
+\begin{DoxyItemize}
+\item {\ttfamily virtual \texorpdfstring{$\sim$}{\string~}\+IObserver() = default}\+: Virtual destructor.
+\item {\ttfamily virtual void Update() = 0}\+: Pure virtual method to notify the observer of a state change.
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{ISink Interface}{ISink Interface}}\label{index_autotoc_md11}
+Defines the sink interface for receiving and handling processed data.\hypertarget{index_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Public Methods}{Public Methods}}\label{index_autotoc_md12}
+
+\begin{DoxyItemize}
+\item {\ttfamily virtual \texorpdfstring{$\sim$}{\string~}\+ISink() = default}\+: Virtual destructor.
+\item {\ttfamily virtual void write(const std\+::string\& data) = 0}\+: Pure virtual method to write data to the sink.
+\end{DoxyItemize}\hypertarget{index_autotoc_md13}{}\doxysubsection{\texorpdfstring{ISource Interface}{ISource Interface}}\label{index_autotoc_md13}
+Defines the source interface for providing raw data.\hypertarget{index_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Public Methods}{Public Methods}}\label{index_autotoc_md14}
+
+\begin{DoxyItemize}
+\item {\ttfamily virtual \texorpdfstring{$\sim$}{\string~}\+ISource() = default}\+: Virtual destructor.
+\item {\ttfamily virtual uint8\+\_\+t read() = 0}\+: Pure virtual method to read data from the source.
+\end{DoxyItemize}\hypertarget{index_autotoc_md15}{}\doxysubsection{\texorpdfstring{ISubject Interface}{ISubject Interface}}\label{index_autotoc_md15}
+Defines the subject interface in the observer pattern.\hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{Public Methods}{Public Methods}}\label{index_autotoc_md16}
+
+\begin{DoxyItemize}
+\item {\ttfamily virtual \texorpdfstring{$\sim$}{\string~}\+ISubject() = default}\+: Virtual destructor.
+\item {\ttfamily virtual bool Get\+State() = 0}\+: Pure virtual method to get the state of the subject.
+\item {\ttfamily virtual void Attach(\+IObserver\texorpdfstring{$\ast$}{*} observer) = 0}\+: Pure virtual method to attach an observer.
+\item {\ttfamily virtual void Detach(\+IObserver\texorpdfstring{$\ast$}{*} observer) = 0}\+: Pure virtual method to detach an observer.
+\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysection{\texorpdfstring{Unit Testing}{Unit Testing}}\label{index_autotoc_md17}
+Extensive unit tests cover modules related to byte processing, conversion, and data handling. Tests ensure the reliability and correctness of the program. 

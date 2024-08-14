@@ -1,0 +1,125 @@
+\doxysection{Byte\+Processor Class Reference}
+\hypertarget{classByteProcessor}{}\label{classByteProcessor}\index{ByteProcessor@{ByteProcessor}}
+
+
+Class responsible for processing bytes from a source and writing results to a sink.  
+
+
+
+
+Inheritance diagram for Byte\+Processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{d0/d85/classByteProcessor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Byte\+Processor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{d8/d83/classByteProcessor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classByteProcessor_a14cc73e947f8aa3bf1ac52220628ea93}{Byte\+Processor}} (\mbox{\hyperlink{classISource}{ISource}} \&source, \mbox{\hyperlink{classISink}{ISink}} \&sink)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classByteProcessor}{Byte\+Processor} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classByteProcessor_a465205236b0c0923defa06cbcbd1c6e2}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the processing thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classByteProcessor_a0e16625d9251ef123cd4a4d8b865a26a}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the processing thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classByteProcessor_a5aad03dc374590f89893087613fb073d}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Updates the observer state and notifies the processing thread. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classByteProcessor_a1b827280707f9d3372cbe06c985c9c34}{\texorpdfstring{$\sim$}{\string~}\+Byte\+Processor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classByteProcessor}{Byte\+Processor}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIObserver}{IObserver}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIObserver_a1306da2dbaf55620130af5586e3a0373}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classIObserver}{IObserver}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for processing bytes from a source and writing results to a sink. 
+
+The \doxylink{classByteProcessor}{Byte\+Processor} class is an implementation of an observer pattern, which listens to a source, processes the bytes received, and writes the processed data to a sink. The processing is done in a separate thread. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classByteProcessor_a14cc73e947f8aa3bf1ac52220628ea93}\label{classByteProcessor_a14cc73e947f8aa3bf1ac52220628ea93} 
+\index{ByteProcessor@{ByteProcessor}!ByteProcessor@{ByteProcessor}}
+\index{ByteProcessor@{ByteProcessor}!ByteProcessor@{ByteProcessor}}
+\doxysubsubsection{\texorpdfstring{ByteProcessor()}{ByteProcessor()}}
+{\footnotesize\ttfamily Byte\+Processor\+::\+Byte\+Processor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classISource}{ISource}} \&}]{source,  }\item[{\mbox{\hyperlink{classISink}{ISink}} \&}]{sink }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classByteProcessor}{Byte\+Processor} object. 
+
+Initializes the \doxylink{classByteProcessor}{Byte\+Processor} with a reference to a source and a sink, and attaches itself as an observer to the source.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Reference to the data source. \\
+\hline
+{\em sink} & Reference to the data sink. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classByteProcessor_a1b827280707f9d3372cbe06c985c9c34}\label{classByteProcessor_a1b827280707f9d3372cbe06c985c9c34} 
+\index{ByteProcessor@{ByteProcessor}!````~ByteProcessor@{\texorpdfstring{$\sim$}{\string~}ByteProcessor}}
+\index{````~ByteProcessor@{\texorpdfstring{$\sim$}{\string~}ByteProcessor}!ByteProcessor@{ByteProcessor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ByteProcessor()}{\string~ByteProcessor()}}
+{\footnotesize\ttfamily Byte\+Processor\+::\texorpdfstring{$\sim$}{\string~}\+Byte\+Processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{classByteProcessor}{Byte\+Processor}. 
+
+Ensures that the processing thread is stopped before the object is destroyed. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classByteProcessor_a465205236b0c0923defa06cbcbd1c6e2}\label{classByteProcessor_a465205236b0c0923defa06cbcbd1c6e2} 
+\index{ByteProcessor@{ByteProcessor}!start@{start}}
+\index{start@{start}!ByteProcessor@{ByteProcessor}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Byte\+Processor\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the processing thread. 
+
+If the processing thread is not already running, this function starts it by setting the running flag to true and launching the thread which executes the run method. \Hypertarget{classByteProcessor_a0e16625d9251ef123cd4a4d8b865a26a}\label{classByteProcessor_a0e16625d9251ef123cd4a4d8b865a26a} 
+\index{ByteProcessor@{ByteProcessor}!stop@{stop}}
+\index{stop@{stop}!ByteProcessor@{ByteProcessor}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Byte\+Processor\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the processing thread. 
+
+If the processing thread is running, this function stops it by setting the running flag to false and waiting for the thread to join. \Hypertarget{classByteProcessor_a5aad03dc374590f89893087613fb073d}\label{classByteProcessor_a5aad03dc374590f89893087613fb073d} 
+\index{ByteProcessor@{ByteProcessor}!Update@{Update}}
+\index{Update@{Update}!ByteProcessor@{ByteProcessor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Byte\+Processor\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the observer state and notifies the processing thread. 
+
+This method is called by the source when there is new data to be processed. It updates the observer state and notifies the processing thread to wake up and process the new data. 
+
+Implements \mbox{\hyperlink{classIObserver_a90490f729c3546ecce5108fbf3833621}{IObserver}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Byte\+Processor.\+h\item 
+Byte\+Processor.\+cpp\end{DoxyCompactItemize}

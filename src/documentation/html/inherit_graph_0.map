@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$dd/d8c/classIObserver.html" title="Interface for observer in the observer pattern." alt="" coords="5,5,84,31"/>
+<area shape="rect" id="Node000001" href="$d5/d9a/classByteProcessor.html" title="Class responsible for processing bytes from a source and writing results to a sink." alt="" coords="132,5,239,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="100,16,131,16,131,21,100,21"/>
+</map>

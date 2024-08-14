@@ -1,0 +1,107 @@
+\doxysection{ISubject Class Reference}
+\hypertarget{classISubject}{}\label{classISubject}\index{ISubject@{ISubject}}
+
+
+Interface for the subject in the observer pattern.  
+
+
+
+
+{\ttfamily \#include $<$ISubject.\+h$>$}
+
+
+
+Inheritance diagram for ISubject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{d9/d42/classISubject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classISubject_ae7264a3f132816d45581a1b31845ecac}{\texorpdfstring{$\sim$}{\string~}\+ISubject}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classISubject}{ISubject}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISubject_acf67bacff201542e7488163ea12c00ab}{Get\+State}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the state of the subject. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classISubject_ae5eab66fa44f227aaafd9aee56018fe8}{Attach}} (\mbox{\hyperlink{classIObserver}{IObserver}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to attach an observer to the subject. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classISubject_a2839e9b5ad3cdd6e73081272def58e27}{Detach}} (\mbox{\hyperlink{classIObserver}{IObserver}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to detach an observer from the subject. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for the subject in the observer pattern. 
+
+The \doxylink{classISubject}{ISubject} class defines a standard interface for all subject objects, which are observed by observers. It includes methods to attach, detach, and notify observers, as well as to get the state of the subject. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classISubject_ae7264a3f132816d45581a1b31845ecac}\label{classISubject_ae7264a3f132816d45581a1b31845ecac} 
+\index{ISubject@{ISubject}!````~ISubject@{\texorpdfstring{$\sim$}{\string~}ISubject}}
+\index{````~ISubject@{\texorpdfstring{$\sim$}{\string~}ISubject}!ISubject@{ISubject}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ISubject()}{\string~ISubject()}}
+{\footnotesize\ttfamily virtual ISubject\+::\texorpdfstring{$\sim$}{\string~}\+ISubject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{classISubject}{ISubject}. 
+
+Ensures that derived class destructors are called properly. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classISubject_ae5eab66fa44f227aaafd9aee56018fe8}\label{classISubject_ae5eab66fa44f227aaafd9aee56018fe8} 
+\index{ISubject@{ISubject}!Attach@{Attach}}
+\index{Attach@{Attach}!ISubject@{ISubject}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily virtual void ISubject\+::\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIObserver}{IObserver}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to attach an observer to the subject. 
+
+This method is called to attach an observer to the subject so that it can be notified of state changes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Pointer to the observer to be attached. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classISubject_a2839e9b5ad3cdd6e73081272def58e27}\label{classISubject_a2839e9b5ad3cdd6e73081272def58e27} 
+\index{ISubject@{ISubject}!Detach@{Detach}}
+\index{Detach@{Detach}!ISubject@{ISubject}}
+\doxysubsubsection{\texorpdfstring{Detach()}{Detach()}}
+{\footnotesize\ttfamily virtual void ISubject\+::\+Detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIObserver}{IObserver}} \texorpdfstring{$\ast$}{*}}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to detach an observer from the subject. 
+
+This method is called to detach an observer from the subject, stopping it from receiving state change notifications.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Pointer to the observer to be detached. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classISubject_acf67bacff201542e7488163ea12c00ab}\label{classISubject_acf67bacff201542e7488163ea12c00ab} 
+\index{ISubject@{ISubject}!GetState@{GetState}}
+\index{GetState@{GetState}!ISubject@{ISubject}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily virtual bool ISubject\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to get the state of the subject. 
+
+This method is called to retrieve the current state of the subject.
+
+\begin{DoxyReturn}{Returns}
+The current state of the subject as a boolean value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ISubject.\+h\end{DoxyCompactItemize}

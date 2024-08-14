@@ -1,0 +1,29 @@
+\doxysection{ISubject.\+h}
+\hypertarget{ISubject_8h_source}{}\label{ISubject_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Алексей\ Русских\ on\ 14.08.2024.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BYTEPROCESSOR\_ISUBJECT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BYTEPROCESSOR\_ISUBJECT\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}IObserver.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classISubject}{ISubject}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classISubject_ae7264a3f132816d45581a1b31845ecac}{\string~ISubject}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISubject_acf67bacff201542e7488163ea12c00ab}{GetState}}()\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classISubject_ae5eab66fa44f227aaafd9aee56018fe8}{Attach}}(\mbox{\hyperlink{classIObserver}{IObserver}}*\ observer)\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classISubject_a2839e9b5ad3cdd6e73081272def58e27}{Detach}}(\mbox{\hyperlink{classIObserver}{IObserver}}*\ observer)\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Notify()\ =\ 0;}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BYTEPROCESSOR\_ISUBJECT\_H}}
+
+\end{DoxyCode}

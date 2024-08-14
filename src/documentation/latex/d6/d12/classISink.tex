@@ -1,0 +1,61 @@
+\doxysection{ISink Class Reference}
+\hypertarget{classISink}{}\label{classISink}\index{ISink@{ISink}}
+
+
+Interface for a sink in a data processing pipeline.  
+
+
+
+
+{\ttfamily \#include $<$ISink.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classISink_accfd25ada43110c11b4f5a8897a9b703}{\texorpdfstring{$\sim$}{\string~}\+ISink}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classISink}{ISink}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classISink_a1204364bf3a4ca4d978f83aabda7324e}{write}} (const std\+::string \&data)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to be overridden by concrete sinks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for a sink in a data processing pipeline. 
+
+The \doxylink{classISink}{ISink} class defines a standard interface for all sink objects, which are responsible for receiving and handling processed data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classISink_accfd25ada43110c11b4f5a8897a9b703}\label{classISink_accfd25ada43110c11b4f5a8897a9b703} 
+\index{ISink@{ISink}!````~ISink@{\texorpdfstring{$\sim$}{\string~}ISink}}
+\index{````~ISink@{\texorpdfstring{$\sim$}{\string~}ISink}!ISink@{ISink}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ISink()}{\string~ISink()}}
+{\footnotesize\ttfamily virtual ISink\+::\texorpdfstring{$\sim$}{\string~}\+ISink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{classISink}{ISink}. 
+
+Ensures that derived class destructors are called properly. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classISink_a1204364bf3a4ca4d978f83aabda7324e}\label{classISink_a1204364bf3a4ca4d978f83aabda7324e} 
+\index{ISink@{ISink}!write@{write}}
+\index{write@{write}!ISink@{ISink}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual void ISink\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to be overridden by concrete sinks. 
+
+This method is called to write data to the sink.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The processed data to be written. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ISink.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\doxysection{ISource Class Reference}
+\hypertarget{classISource}{}\label{classISource}\index{ISource@{ISource}}
+
+
+Interface for a data source in a data processing pipeline.  
+
+
+
+
+{\ttfamily \#include $<$ISource.\+h$>$}
+
+
+
+Inheritance diagram for ISource\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{db/d71/classISource__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ISource\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{de/d42/classISource__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classISource_a377195331fea7f922f1127f928874bb1}{\texorpdfstring{$\sim$}{\string~}\+ISource}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classISource}{ISource}. \end{DoxyCompactList}\item 
+virtual uint8\+\_\+t \mbox{\hyperlink{classISource_ab25f038ea0baaf95862e1bdb095dcb9e}{read}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to be overridden by concrete sources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISubject}{ISubject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classISubject_ae7264a3f132816d45581a1b31845ecac}{\texorpdfstring{$\sim$}{\string~}\+ISubject}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classISubject}{ISubject}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISubject_acf67bacff201542e7488163ea12c00ab}{Get\+State}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the state of the subject. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classISubject_ae5eab66fa44f227aaafd9aee56018fe8}{Attach}} (\mbox{\hyperlink{classIObserver}{IObserver}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to attach an observer to the subject. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classISubject_a2839e9b5ad3cdd6e73081272def58e27}{Detach}} (\mbox{\hyperlink{classIObserver}{IObserver}} \texorpdfstring{$\ast$}{*}observer)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to detach an observer from the subject. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for a data source in a data processing pipeline. 
+
+The \doxylink{classISource}{ISource} class defines a standard interface for all source objects, which are responsible for providing raw data to be processed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classISource_a377195331fea7f922f1127f928874bb1}\label{classISource_a377195331fea7f922f1127f928874bb1} 
+\index{ISource@{ISource}!````~ISource@{\texorpdfstring{$\sim$}{\string~}ISource}}
+\index{````~ISource@{\texorpdfstring{$\sim$}{\string~}ISource}!ISource@{ISource}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ISource()}{\string~ISource()}}
+{\footnotesize\ttfamily virtual ISource\+::\texorpdfstring{$\sim$}{\string~}\+ISource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{classISource}{ISource}. 
+
+Ensures that derived class destructors are called properly. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classISource_ab25f038ea0baaf95862e1bdb095dcb9e}\label{classISource_ab25f038ea0baaf95862e1bdb095dcb9e} 
+\index{ISource@{ISource}!read@{read}}
+\index{read@{read}!ISource@{ISource}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual uint8\+\_\+t ISource\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to be overridden by concrete sources. 
+
+This method is called to read data from the source.
+
+\begin{DoxyReturn}{Returns}
+A byte of data read from the source. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ISource.\+h\end{DoxyCompactItemize}
